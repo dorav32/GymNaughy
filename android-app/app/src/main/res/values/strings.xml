@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymNaughy</string>
+
+    <!-- Auth -->
+    <string name="login_title">Welcome back</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="action_login">Log in</string>
+    <string name="action_register">Create account</string>
+    <string name="prompt_go_to_register">Don\'t have an account? Sign up</string>
+    <string name="prompt_go_to_login">Already have an account? Log in</string>
+    <string name="register_title">Create your account</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_level_title">What\'s your fitness level?</string>
+    <string name="level_beginner">Beginner</string>
+    <string name="level_intermediate">Intermediate</string>
+    <string name="level_advanced">Advanced</string>
+    <string name="action_continue">Continue</string>
+    <string name="onboarding_equipment_title">What equipment do you have?</string>
+    <string name="equipment_bodyweight">Bodyweight only</string>
+    <string name="equipment_dumbbells">Dumbbells</string>
+    <string name="equipment_bands">Resistance bands</string>
+    <string name="equipment_full_gym">Full gym access</string>
+    <string name="action_generate_plan">Generate my plan</string>
+    <string name="onboarding_selection_error">Pick a fitness level and at least one equipment option.</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_greeting">Hi, %1$s</string>
+    <string name="dashboard_streak_label">Day streak</string>
+    <string name="dashboard_today_label">Today\'s workout</string>
+    <string name="dashboard_no_plan">No plan yet — head to Profile to generate one.</string>
+    <string name="action_start_workout">Start workout</string>
+
+    <!-- Plan -->
+    <string name="plan_title">Your weekly plan</string>
+    <string name="plan_empty_state">Generate a plan from Profile to see your week here.</string>
+
+    <!-- Workout detail -->
+    <string name="hint_reps_completed">Reps completed</string>
+    <string name="action_log_set">Log set</string>
+    <string name="workout_sets_reps">%1$d sets × %2$d reps</string>
+    <string name="workout_progress">Exercise %1$d of %2$d</string>
+    <string name="workout_next_exercise">Next exercise</string>
+    <string name="workout_finish">Finish workout</string>
+
+    <!-- Progress -->
+    <string name="progress_title">Your progress</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="action_sign_out">Sign out</string>
+
+    <!-- Bottom nav -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_plan">Plan</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_profile">Profile</string>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_level_title"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbBeginner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_beginner" />
+
+        <RadioButton
+            android:id="@+id/rbIntermediate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_intermediate" />
+
+        <RadioButton
+            android:id="@+id/rbAdvanced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/level_advanced" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_selection_error"
+        android:textColor="@color/error"
+        android:visibility="gone"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/action_continue"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>

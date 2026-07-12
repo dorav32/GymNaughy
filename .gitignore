@@ -1,0 +1,39 @@
+# --- Android ---
+android-app/*.iml
+android-app/.gradle/
+android-app/local.properties
+android-app/.idea/
+android-app/.DS_Store
+android-app/build/
+android-app/captures/
+android-app/.externalNativeBuild/
+android-app/.cxx/
+android-app/app/build/
+android-app/app/release/
+android-app/app/debug/
+android-app/app/google-services.json
+android-app/*.keystore
+android-app/*.jks
+
+# --- Node / React / backend ---
+node_modules/
+backend-api/node_modules/
+backend-api/.env
+backend-api/dist/
+backend-api/coverage/
+web-dashboard/node_modules/
+web-dashboard/dist/
+web-dashboard/.env
+web-dashboard/.env.local
+
+# --- Firebase ---
+**/serviceAccountKey.json
+.firebase/
+firebase-debug.log
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
