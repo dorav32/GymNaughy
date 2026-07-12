@@ -118,7 +118,17 @@ async function getWorkoutHistory(uid, limit = 30) {
     .limit(limit)
     .get();
 
-  return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  // completedAt is a Firestore Timestamp in the document; convert it to the ISO
+  // string both clients expect (WorkoutLog.completedAt is typed as a string in
+  // docs/DATA_MODEL.md) rather than leaking the raw {seconds, nanoseconds} shape.
+  return snapshot.docs.map((doc) => {
+    const data = doc.data();
+    return {
+      id: doc.id,
+      ...data,
+      completedAt: data.completedAt ? data.completedAt.toDate().toISOString() : null,
+    };
+  });
 }
 
 /**
