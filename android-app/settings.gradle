@@ -10,6 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // MPAndroidChart (used by the Progress screen) is published on JitPack,
+        // not Google's Maven or Maven Central.
+        maven { url 'https://jitpack.io' }
     }
 }
 
