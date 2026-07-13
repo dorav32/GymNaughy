@@ -9,6 +9,7 @@ This walks through running all three subprojects against one Firebase project.
 3. Enable **Firestore** (production mode) in a nearby region.
 4. Project settings → **Your apps** → add an **Android app** with package name `com.gymnaughy.android`, download `google-services.json`.
 5. Project settings → **Service accounts** → **Generate new private key**, save as `backend-api/serviceAccountKey.json` (already git-ignored).
+6. **Firestore Database → Rules tab** → paste the contents of [`firestore.rules`](../firestore.rules) → **Publish**. Firestore starts in deny-all mode, so without this step every direct client read from the Android app (dashboard, plan, progress) fails with a silent permission-denied error even though `backend-api` can still write fine through the Admin SDK.
 
 ## 2. `backend-api`
 

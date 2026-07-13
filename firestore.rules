@@ -1,0 +1,26 @@
+rules_version = '2';
+
+// Deploy via Firebase Console → Firestore Database → Rules → paste + Publish
+// (or `firebase deploy --only firestore:rules` if you use the Firebase CLI).
+// See docs/DATA_MODEL.md for the reasoning: trainees read their own profile,
+// plan, and logs directly; every write goes through backend-api's Admin SDK,
+// which bypasses these rules entirely. Cross-user reads (trainer roster) are
+// never exposed here at all — only through the API's role check.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+
+      match /plans/{planId} {
+        allow read: if request.auth != null && request.auth.uid == uid;
+        allow write: if false;
+      }
+
+      match /workout_logs/{logId} {
+        allow read: if request.auth != null && request.auth.uid == uid;
+        allow write: if false;
+      }
+    }
+  }
+}

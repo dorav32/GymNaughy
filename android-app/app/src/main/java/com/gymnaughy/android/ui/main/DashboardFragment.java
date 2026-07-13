@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -49,6 +50,14 @@ public class DashboardFragment extends Fragment {
         viewModel.getCurrentPlan().observe(getViewLifecycleOwner(), plan -> {
             currentPlan = plan;
             renderTodayWorkout(plan);
+        });
+
+        // Surfaces Firestore permission-denied / offline errors instead of leaving
+        // the Start Workout button silently disabled with no explanation.
+        viewModel.getError().observe(getViewLifecycleOwner(), error -> {
+            if (error != null) {
+                Toast.makeText(requireContext(), error, Toast.LENGTH_LONG).show();
+            }
         });
 
         binding.btnStartWorkout.setOnClickListener(v -> {
