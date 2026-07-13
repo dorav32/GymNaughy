@@ -14,7 +14,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "BASE_API_URL", '"http://10.0.2.2:4000/api/"'
+        // Uses the emulator's own localhost via `adb reverse tcp:4000 tcp:4000`
+        // (see docs/SETUP.md) rather than the 10.0.2.2 host alias, which some
+        // antivirus/firewall software blocks on the emulator's virtual NIC even
+        // when Windows Firewall itself is disabled.
+        buildConfigField "String", "BASE_API_URL", '"http://localhost:4000/api/"'
     }
 
     buildTypes {

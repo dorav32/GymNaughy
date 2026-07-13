@@ -40,7 +40,11 @@ node scripts/setTrainerRole.js <trainer-firebase-uid>
 
 1. Open `android-app/` in Android Studio (Giraffe or newer).
 2. Drop the downloaded `google-services.json` into `android-app/app/`.
-3. Edit `app/src/main/java/com/gymnaughy/android/util/Constants.java` and set `BASE_API_URL` to your backend (use `http://10.0.2.2:4000/api/` for the emulator talking to a backend on your host machine).
+3. Debug builds already point at `http://localhost:4000/api/` (see `BASE_API_URL` in `app/build.gradle`). Before running the app, forward that port from your host machine into the emulator over ADB:
+   ```bash
+   adb reverse tcp:4000 tcp:4000
+   ```
+   Run this once per emulator boot (Android Studio's **Terminal** tab works fine, or any shell with `platform-tools` on `PATH`). This is more reliable than the classic `10.0.2.2` host alias, which some antivirus/firewall software blocks on the emulator's virtual network adapter even with Windows Firewall disabled.
 4. Run on an emulator or device (min SDK 24 / Android 7.0).
 
 ## 4. `web-dashboard`
