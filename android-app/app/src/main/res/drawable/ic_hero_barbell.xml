@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="240dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Decorative barbell silhouette used as a translucent hero background on the auth screens. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,90 h14 v20 h-14 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M168,90 h14 v20 h-14 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,84 L166,84 166,116 34,116 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M2,60 m-30,0 a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M2,140 m-30,0 a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M198,60 m-30,0 a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M198,140 m-30,0 a30,30 0 1,0 60,0 a30,30 0 1,0 -60,0" />
+</vector>
