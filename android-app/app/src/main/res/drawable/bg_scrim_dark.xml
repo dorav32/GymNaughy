@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!--
+      Overlaid on top of the full-bleed photo backgrounds (see bg_photo_* in
+      drawable/) so white text and the floating card stay legible regardless
+      of how bright/busy the underlying photo is.
+    -->
+    <gradient
+        android:type="linear"
+        android:angle="90"
+        android:startColor="#8A0D1912"
+        android:centerColor="#B30D1912"
+        android:endColor="#E60D1912" />
+</shape>
